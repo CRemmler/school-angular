@@ -1,1 +1,1 @@
-# hi school-angular
+# school-angular
