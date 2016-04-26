@@ -1,0 +1,16 @@
+[
+  {
+    "uniqueId" : 0,
+    "gradeLevel" : 3,
+    "firstName" : "Annie",
+    "lastName" : "Smith",
+    "email" : "annie.smith@myschool.com"
+  },
+  {
+    "uniqueId" : 1,
+    "gradeLevel" : 0,
+    "firstName": "Brayden",
+    "lastName": "Graham",
+    "email": "brayden.graham@myschoo.com"
+  }
+]

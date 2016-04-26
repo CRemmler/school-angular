@@ -1,0 +1,47 @@
+<html>
+   
+   <head>
+      <title>School</title>
+      <meta charset="utf-8"/>
+      <script src = "app/angular.min.js"></script>
+      <script src = "controller.js"></script>
+      <script src = "directive.js"></script>
+   </head>
+   
+   <body>
+      
+      <h2>All Data</h2>
+      <div ng-app = "mainApp">
+        <div ng-controller = "DataController">
+          <table>
+     	    <th><input type="radio" ng-model="order" value="gradeLevel">Grade</th>
+  	    <th><input type="radio" ng-model="order" value="firstName">First Name</th>
+	    <th><input type="radio" ng-model="order" value="lastName">Last Name</th>
+	    <th><input type="radio" ng-model="order" value="email">Email</th>
+	    <th><input type="radio" ng-model="order" value="uniqueId">Unique Id</th>
+	    <th></th>
+	    <th></th>
+	    <tr ng-repeat="entry in entries">
+	      <td>{{ entry.gradeLevel }}</td>
+	      <td>{{ entry.firstName }}</td>
+	      <td>{{ entry.lastName }}</td>
+	      <td>{{ entry.email }}</td>
+	      <td>{{ entry.uniqueId }}</td>
+	      <td><button ng-controller="EditController" ng-click="alert()">Edit</button></td>
+	      <td><button>Delete</button></td>
+	    </tr>
+	  </table>
+        </div>
+      </div>
+
+ <!--
+      <div ng-app = "mainApp2">
+        <form-directive></form-directive>
+        <future-directive></future-directive>
+      </div>
+-->
+
+     <date-picker>a</date-picker>
+
+
+</html>
