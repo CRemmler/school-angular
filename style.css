@@ -1,0 +1,15 @@
+.displayData th {
+  text-align: left;
+  background-color: #a0a0a0;  
+  padding: 0px 5px 0px 0px;
+}
+.displayData tr {
+  background-color: #d0d0d0;
+}
+.displayData td {
+  padding: 0px 5px 0px 22px;
+}
+th, tr .action {
+  background-color: white;
+  padding: 0px;
+}

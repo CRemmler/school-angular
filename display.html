@@ -1,0 +1,30 @@
+
+<table class="displayData">
+            <th><input type="radio" ng-model="order" value="lastName" ng-click="changeOrder('lastName')" checked="checked"/>Last Name</th>
+            <th><input type="radio" ng-model="order" value="firstName" ng-click="changeOrder('firstName')"/>First Name</th>
+            <th><input type="radio" ng-model="order" value="gradeLevel" ng-click="changeOrder('gradeLevel')"/>Grade</th>
+            <th><input type="radio" ng-model="order" value="email" ng-click="changeOrder('email')"/>Email</th>
+            <th><input type="radio" ng-model="order" value="uniqueId" ng-click="changeOrder('uniqueId')"/>Id</th>
+            <th class='action'></th>
+            <th class='action'></th>
+            <tr ng-repeat="entry in entries | orderBy: order"> 
+              <td>{{ entry.lastName }}</td>
+              <td>{{ entry.firstName }}</td>
+              <td>{{ entry.gradeLevel }}</td>
+              <td>{{ entry.email }}</td>
+              <td>{{ entry.uniqueId }}</td>
+              <td class='action'><button ng-click="edit(entry.uniqueId)">Edit</button>
+              <button ng-click="delete(entry.uniqueId)">Delete</button></td>
+            </tr>
+	    <!--
+	       <tr>
+	        <td><input type="text" ng-model="student.lastName"/></td>
+	        <td><input type="text" ng-model="student.firstName"/></td>
+                <td><input type="text" ng-model="student.gradeLevel"/></td>
+	        <td><input type="text" ng-model="student.email"/></td>
+	        <td></td>
+	        <td class='action'><input type="submit" ng-click="submit()" value="Submit"/></td>
+	        <td class='action'></td>
+	    </tr>
+	    -->
+</table>

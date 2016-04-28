@@ -1,0 +1,29 @@
+
+<form>
+  <table class="alterData">
+    <tr>
+       <td/>Grade: 
+       <td/><input type="text" ng-model="student.gradeLevel"/>
+    </tr>
+    <tr>
+       <td/>First Name: 
+       <td/><input type="text" ng-model="student.firstName"/>
+    </tr>
+    <tr>
+       <td/>Last Name: 
+       <td/><input type="text" ng-model="student.lastName"/>
+    </tr>
+    <tr>
+       <td/>Email: 
+       <td/><input type="text" ng-model="student.email"/>
+    </tr>
+    <tr>
+       <td/>
+       <td>
+         <button ng-click="submit()">Submit</button>
+         <button ng-click="update()">Update</button>
+         <button ng-click="cancel()">Cancel</button>
+       </td>
+    </tr>
+  </table>
+</form>
