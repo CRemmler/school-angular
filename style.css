@@ -1,15 +1,27 @@
-.displayData th {
+.viewData th {
   text-align: left;
-  background-color: #a0a0a0;  
+  background-color: #d0d0d0;  
   padding: 0px 5px 0px 0px;
 }
-.displayData tr {
-  background-color: #d0d0d0;
+.viewData tr {
+  background-color: #f0f0f0;
 }
-.displayData td {
+.viewData td {
   padding: 0px 5px 0px 22px;
 }
 th, tr .action {
   background-color: white;
   padding: 0px;
+}
+input.ng-dirty {
+//  border-color: blue;
+}
+input.ng-valid {
+//  border-color: green;
+}
+input.ng-invalid {
+//  border-color: red;
+}
+input.ng-empty {
+//  background-color: white;
 }

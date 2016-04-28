@@ -9,18 +9,27 @@
    </head>
    
    <body ng-app = "mainApp">
-      <h2>View Data</h2>
-      <div>
-        <div ng-controller = "dataController">
-	  <display-directive></display-directive>
-	  <p>
-	  <h2>Create and Edit Data</h2>
-          <alter-directive></alter-directive>
-	</div>
+
+     <div ng-controller = "dataController">
+
+       <h2>Select School</h2>
+       <select-directive></select-directive>
+
+       <h2>View School Data</h2>
+       <view-directive></view-directive>
+       <p>
+	  
+       <h2>Manage Data</h2>
+       <manage-directive></manage-directive>
+
      </div>
-     <div>
-        <future-directive></future-directive>
-      </div>
+
+     <h2>Future Work</h2>
+     <future-directive></future-directive>
+
+     <h2>Contact</h2>
+     carolyn@remmler.org
+
    </body>
 
 </html>

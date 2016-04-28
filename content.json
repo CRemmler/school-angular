@@ -2,13 +2,19 @@
   {
     "gradeLevel" : 3,
     "firstName" : "Annie",
-    "lastName" : "Smith",
+    "lastName" : "Alligator",
     "email" : "annie.smith@myschool.com"
   },
   {
     "gradeLevel" : 0,
     "firstName": "Brayden",
-    "lastName": "Graham",
-    "email": "brayden.graham@myschoo.com"
+    "lastName": "Bear",
+    "email": "brayden.graham@myschool.com"
+  },
+  {
+    "gradeLevel" : 10,
+    "firstName": "Sammy",
+    "lastName": "Snail",
+    "email": "sammy.snail@myschool.com"
   }
 ]
