@@ -6,6 +6,24 @@
     "email" : "annie.smith@myschool.com"
   },
   {
+    "gradeLevel" : 9,
+    "firstName" : "Jamie",
+    "lastName" : "Jackal",
+    "email" : "jamie.jackal@myschool.com"
+  },
+  {
+    "gradeLevel" : 2,
+    "firstName" : "Henry",
+    "lastName" : "Hippo",
+    "email" : "henry.hippo@myschool.com"
+  },
+  {
+    "gradeLevel" : 12,
+    "firstName" : "Penelope",
+    "lastName" : "Panda",
+    "email" : "penelope.panda@myschool.com"
+  },
+  {
     "gradeLevel" : 0,
     "firstName": "Brayden",
     "lastName": "Bear",

@@ -10,6 +10,10 @@ myApp.controller('dataController', function($scope, $http) {
   
   $scope.order = "lastName";
   $scope.student = [];
+  $scope.student.firstName = "";
+  $scope.student.lastName = "";
+  $scope.student.gradeLevel = "0";
+  $scope.student.email = "";
   $scope.selection = "0-8";
   $scope.entries = [];
   $scope.mode = "create"; // or edit
@@ -32,17 +36,18 @@ myApp.controller('dataController', function($scope, $http) {
   };
   
   $scope.submit = function() {
-    this.student.uniqueId = $scope.maxId;
-    $scope.maxId++;
-    $scope.entries.push(this.student);
-    changeToEdit(false);
+    if ($scope.myForm.$valid) {
+      this.student.uniqueId = $scope.maxId;
+      $scope.maxId++;
+      $scope.entries.push(this.student);
+      changeToEdit(false);
+    }
   };
   
   $scope.delete = function(deleteId) {
     if (window.confirm('Are you sure you want to delete this?')) {
       editIndex = findIndex(deleteId);
       if ($scope.entries[editIndex].uniqueId == $scope.student.uniqueId) {
-        $scope.students = [];
 	changeToEdit(false);
       }
       $scope.entries.splice(editIndex,1);
@@ -60,12 +65,14 @@ myApp.controller('dataController', function($scope, $http) {
   };
   
   $scope.update = function() {
-    editIndex = findIndex($scope.student.uniqueId);
-    $scope.entries[editIndex].lastName = $scope.student.lastName;
-    $scope.entries[editIndex].firstName = $scope.student.firstName;
-    $scope.entries[editIndex].gradeLevel = $scope.student.gradeLevel;
-    $scope.entries[editIndex].email = $scope.student.email;
+    if ($scope.myForm.$valid) {
+      editIndex = findIndex($scope.student.uniqueId);
+      $scope.entries[editIndex].lastName = $scope.student.lastName;
+      $scope.entries[editIndex].firstName = $scope.student.firstName;
+      $scope.entries[editIndex].gradeLevel = $scope.student.gradeLevel;
+      $scope.entries[editIndex].email = $scope.student.email;
     changeToEdit(false);
+    }
   };
   
   $scope.cancel = function() {
@@ -85,7 +92,10 @@ myApp.controller('dataController', function($scope, $http) {
   function changeToEdit(newEditState) {
      $scope.editState = newEditState;
      if ($scope.editState == false) {
-       $scope.student = [];
+       $scope.student.gradeLevel = "0";
+       $scope.student.firstName = "";
+       $scope.student.lastName = "";
+       $scope.student.email = "";
      }
   }
 
@@ -129,7 +139,6 @@ myApp.directive('futureDirective', function() {
 
 myApp.filter('gradeLevels', function() {
   return function(items, selection) {
-    //alert("selection " + selection + " number of items " + items.length);
     var filtered = [];
     var min = parseInt(selection.split("-")[0]);
     var max = parseInt(selection.split("-")[1]);

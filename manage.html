@@ -1,0 +1,33 @@
+<form name="myForm" validate>
+  <table class="manageData">
+    <tr>
+       <td/>First Name: 
+       <td/><input type="text" ng-model="student.firstName" ng-required="true"/><span>*</span>
+    </tr>
+    <tr>
+       <td/>Last Name: 
+       <td/><input type="text" ng-model="student.lastName" ng-required="true"/><span>*</span>
+    </tr>
+    <tr>
+       <td/>Grade : 
+	 <td>
+           <select ng-model="student.gradeLevel">
+	     <option value="{{x}}" ng-repeat="x in ['0','1','2','3','4','5','6','7','8','9','10','11','12']" ng-required="true">{{x}}</option>i
+	   </select>
+	   <span>*</span>
+         </td> 
+    </tr>
+    <tr>
+       <td/>Email: 
+       <td/><input name="myInput" ng-model="student.email" type="email" ng-required="true"/><span>*</span>
+    </tr>
+    <tr>
+       <td/>
+       <td>
+         <button ng-click="submit()" ng-show="!editState">Submit</button>
+         <button ng-click="update()" ng-show="editState">Update</button>
+         <button ng-click="cancel()" ng-show="editState">Cancel</button>
+       </td>
+    </tr>
+  </table>
+</form>
