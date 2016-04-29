@@ -1,6 +1,9 @@
 Objective:
 Create a webpage that manages a school classroom.
 
+Try it out:
+https://remmler.org/school-angular/
+
 User Stories:
 As a user I want to:
 - use the app in the latest version of Chrome
